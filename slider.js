@@ -2,10 +2,13 @@ const slider = document.querySelector("#slider");
 var sliderSection = document.querySelectorAll(".slider__section");
 var sliderSectionLast = sliderSection[sliderSection.length - 1];
 
+
+
 const btnLeft = document.querySelector(".slider__btn-left");
 const btnRight = document.querySelector(".slider__btn-right");
 
-slider.insertAdjacentElement("afterbegin",sliderSectionLast)
+slider.insertAdjacentElement("afterbegin",sliderSectionLast);
+
 
 function proximaImagen () {
     var sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
@@ -39,4 +42,5 @@ btnLeft.addEventListener("click", ()=>{
 });
 
 setInterval(proximaImagen,4000);
+
 
