@@ -1,0 +1,690 @@
+/*******   INICIO *******/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.barraSuperior{
+    padding: 1em 2em;
+}
+
+.primeraFila{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 3em 0;
+}
+
+.icono{
+    border: 1px solid white;
+    box-shadow: inset 0 0 6px rgb(255, 0, 0);
+    margin: .7em .3em;
+    padding: .2em .2em;
+    height: 1.8em;
+    transition: all .3s;
+}
+
+.icono:hover{
+    background-color: rgb(168, 3, 3);
+    cursor: pointer;
+    box-shadow: 0 0 8px red;
+    border: none;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+
+.whatsapp{
+    width: 15em;
+    margin-left: 1.5em;
+}
+
+.menu{
+    display: flex;
+}
+
+#celNumero{
+    color: white;
+    text-shadow: 0 0 6px rgb(255, 0, 0), 0 0 6px rgb(255, 0, 0);
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    top: -8em;
+    right: .2em;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.titulo{
+    font-family: 'Barlow', sans-serif;
+    color: rgb(255, 0, 0);
+    box-shadow:  0 2px red;
+    font-size: 4em;
+    position: absolute;
+    top: 0;
+    left: 42%;
+}
+
+.cuerpoPrincipal{
+    display: flex;
+    align-items: center;    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("media/conjunto\ zapatillas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    margin: 1em;
+}
+
+.portada{
+    width: 100%;
+    padding-left: 20px;
+    
+    
+}
+
+
+.portada h1{
+    font-size: 6em;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 0 0 0 20px;
+}
+
+
+
+.botones{
+    margin: 2em 0 0 1em;
+}
+
+
+.boton, .botonesPortada{
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: .5s;
+}
+
+
+.boton:hover{
+    background-color: red;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px red;
+}
+
+.cuerpo{
+    background-color: rgb(27, 0, 0);
+    min-height: 70vh;
+}
+
+
+
+/****** MENÚ *******/
+
+.opciones{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: white;
+    padding: 0 .2em;
+    transition: .2s;
+}
+
+.opciones:hover{
+    text-shadow: 0 0 6px rgb(255, 0, 0), 0 0 8px rgb(255, 0, 0);
+    text-decoration: underline;
+
+}
+
+#desplegar{
+    position: relative;
+    left: 1em;
+    top: 1em;
+}
+
+#contraer{
+    position: relative;
+    display: none;
+    left: 1em;
+    top: 1em;
+}
+
+#contraer:hover, #desplegar:hover {
+    -webkit-box-shadow:0px 0px 45px 2px rgba(219,0,0,0.9);
+-moz-box-shadow: 0px 0px 45px 2px rgba(219,0,0,0.9);
+box-shadow: 0px 0px 45px 2px rgba(219,0,0,0.9);
+    transition: .2s;
+}
+
+#botonHamburguesa{
+    display: none;
+    width: 3em;
+    position: absolute;
+    top: 3em;
+    left: 80vw;
+
+}
+
+#lineaSuperior, #lineaInferior{
+    position: relative;
+    width: 3em;
+    height: .2em;
+    background-color: white;
+    margin: 1.5em 1em;
+    transition: all .5s;
+}
+
+#lineaSuperior{
+    box-shadow: #ffffff 0 .9em;
+}
+
+#menuHamburguesa{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 80%;
+    width: 15em;
+    margin: 2em;
+    padding: 1em;
+    position: relative;
+    opacity: 0;
+    top: -1em;
+    left: 10em;
+    transition: all .5s;
+    background-color: #ffffff33;
+    cursor: pointer;
+}
+
+#desplegable{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    left: 6em;
+    top: -2em;
+    opacity: 0;
+    transition: all 1s;
+}
+
+
+/* ********** SLIDER ******** */
+
+.botonBanner{
+    font-family: 'Barlow', sans-serif;
+    top: -3em;
+    left: 2em;
+    position: relative;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: .5s;
+}
+
+.botonBanner:hover{
+    background-color: red;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px red;
+}
+
+.container-slide{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.slider{
+    display: flex;
+    width: 300%;
+    height: 500px;
+    margin-left: -300%;
+
+}
+
+
+.slider__section{
+    width: 100%;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.5);
+    top: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.slider__btn:hover{
+    background: #ff0000;
+}
+
+.slider__btn-left{
+    left: 10px;
+    text-shadow: -1px 3px 2px rgb(94, 0, 0);
+
+}
+.slider__btn-right{
+    right: 10px;
+    text-shadow: 3px 3px 2px rgb(94, 0, 0);
+
+}
+
+
+
+/****** FOOTER ******/
+
+.footer{
+    background-color: black;
+    margin-top: auto;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: all 1s;
+}
+
+
+
+.footerIzq{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    
+
+}
+
+.footerDer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    
+}
+
+.textoFooter{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin: .5em 0;
+    display: inline-block;
+    transition: all .3s ease;
+
+
+}
+
+.textoFooter:hover{
+    color: red;
+    text-decoration-line: underline;
+    padding-right: 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+/******* TARJETAS ******/
+
+
+.GrupoTarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    justify-content: center;
+    margin: 0;
+}
+
+.subtitulo{
+    display: inline-flex;
+    margin: 1em 0 1em 1em;
+    font-weight: 400;
+    color: black;
+    font-size: 1.7em;
+    text-shadow: 3px 3px 2px rgb(187, 187, 187);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+#descuento{
+    position: absolute;
+    width: 70px;
+    background: rgb(252, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+}
+
+.tarjeta{
+    width: 18em;
+    margin: 1em;
+    padding: 0;
+    background-color: rgb(231, 231, 231);
+    transition: box-shadow .2s;
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+.tarjeta:hover{
+    box-shadow: 4px 4px 10px rgb(136, 0, 0);;
+    border: 1px solid  rgb(145, 0, 0);
+}
+
+.foto{
+    width: 100%;
+    transition: transform .20s;
+}
+
+.foto:hover{
+    transform: scale(0.95);
+}
+
+
+.genero ,.articulo{
+    width: 100%;
+    text-align: left;
+    margin: 0 0 .5em .5em;
+    text-transform: uppercase;
+}
+
+.genero{
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #474747;
+}
+
+.articulo{
+    font-size: 1.2em;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.precio{
+    margin-right: 1em;
+    padding: 0 0 .5em .5em;
+    text-align: left;
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.precioDescuento{
+    margin-left: 1px;
+    font-weight: 900;
+    font-size: 1.1em;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+
+/*************************** contactos **********************************/
+
+
+.contacto{
+    font-family: 'Barlow', sans-serif;
+    width: 400px;
+    height: 440px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 6px 6px 10px rgb(255, 85, 85);
+    margin: 2em auto;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.contacto h2{
+    width: 180px;
+    margin: 10px 0;
+    padding: 10px 0 0 0;
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 14px 0;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-weight: 200;
+    border-bottom: 2px solid grey;
+    transition: all .3s;
+}
+
+
+
+input:focus{
+    border-bottom: 2px solid rgb(110, 0, 0);
+
+}
+
+p{
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: grey;
+}
+
+button{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    border-radius: 2px solid grey;
+    background: 0;
+    color: rgb(177, 3, 3);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+button:hover{
+    background: rgb(177, 3, 3);
+    color: white;
+}
+
+.contactoHike{
+    position: absolute;
+    width: 300px;
+    background: black;
+    color: white;
+    bottom: -15px;
+    left: 40px;
+    padding: 16px 4px 16px 0;
+    border-radius: 4px;
+    font-size: 13px;
+    box-shadow: 6px 6px 10px rgb(255, 85, 85);
+    align-items: center;
+}
+
+span{
+    margin: 0 5px 0 10px;
+}
+
+/******      RESPONSIVE    ********/
+
+@media only screen and (max-width:1200px){
+    
+}
+
+@media only screen and (max-width:660px){
+    .tarjeta{
+        width: 15em;
+        margin: 1em; 
+    }
+
+    #menuHamburguesa{
+        display: block;
+    }
+
+    #botonHamburguesa{
+        display: block;
+    }
+    #botonHamburguesa{
+        top: -.5em;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .primeraFila {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+    .nombre {
+        left: 70%;
+    }
+}
+
+@media only screen and (max-width:566px){
+    .tarjeta{
+        width: 12em;
+        margin: 1em;
+    }
+    #botonHamburguesa{
+        top: -.5em;
+    }
+}
+
+@media only screen and (max-width:470px){
+    .cuerpoPrincipal{
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+        margin: .5em 0;
+    }
+
+    .portada h1{
+        font-size: 3em;
+        margin: 0;
+    }
+    
+    .botonesPortada{
+        font-size: 1em;
+    }
+
+    #menuHamburguesa{
+        width: 12em;   
+    }
+
+    #botonHamburguesa{
+        top: -.5em;
+    }
+
+    .titulo{
+        font-size: 2em;
+        top: 2em;
+
+    }
+
+    .redes{
+        width: 7em;
+        
+    }
+
+
+    .tarjeta{
+        width: 10em;
+        margin: .3em;
+    }
+
+    .articulo{
+        font-size: 1em;
+    }
+
+    .genero{
+        font-size: .7em;
+    }
+
+    .precio{
+        font-size: 1em;
+    }
+
+    .precioDescuento{
+        font-size: .8em;    
+    }
+    
+    .subtitulo{
+        font-size: 1.2em;
+    }
+
+    .slider{
+        height: 20%;
+    }
+
+    .slider__btn{
+        width: 20px;
+        height: 20px;
+        font-size: 1.5em;
+    }
+
+    .botonBanner{
+        font-size: .9em;
+    }
+
+    .contacto{
+        width: 300px;
+    }
+
+    .contactoHike{
+        width: 260px;
+    }
+}
+
