@@ -233,7 +233,7 @@ box-shadow: 0px 0px 45px 2px rgba(219,0,0,0.9);
     transition: all 1s;
 }
 
-/******* BANNER ************/
+/*********************  BANNER  ********+************/
 
 
 .banner-slider{
@@ -402,7 +402,7 @@ box-shadow: 0px 0px 45px 2px rgba(219,0,0,0.9);
 
 
 
-/******* TARJETAS ******/
+/*************************   TARJETAS   ****************/
 
 
 .GrupoTarjetas{
@@ -495,8 +495,76 @@ box-shadow: 0px 0px 45px 2px rgba(219,0,0,0.9);
     text-decoration: line-through;
 }
 
+/*************************** COLECCIÓN **********************************/
 
-/*************************** contactos **********************************/
+#desplegable1{
+    width: 10em;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 12em;
+}
+
+.textoColeccion{
+    font-size: 2em;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+
+.botonColeccion{
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+    top: 1em;
+    left: -1em;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: .5s;
+}
+
+.botonColeccion:hover{
+    background-color: red;
+    box-shadow: 0 0 35px red;
+}
+
+#colecciones{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50em;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6em;
+}
+
+#coleccion1{
+    width: 25em;
+    border-radius: 20px 0 0 20px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: .3s;
+
+}
+
+#coleccion2{
+    width: 26.6em;
+    margin: 0 0 0 .2em;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: .3s;
+    border-radius: 0 20px 20px 0;
+
+}
+
+
+/*************************** CONTACTO **********************************/
 
 
 .contacto{
@@ -582,11 +650,46 @@ span{
     margin: 0 5px 0 10px;
 }
 
-/******      RESPONSIVE    ********/
+/*****************      RESPONSIVE   ********** ********/
 
-@media only screen and (max-width:1200px){
-    
+@media only screen and (max-width:1115px){
+    .textoColeccion{
+        font-size: 1.8em;
+
+    }
+
+    .botonColeccion{
+        font-size: 1.1em;
+        left: 0em;
+    }
 }
+
+@media only screen and (max-width:1050px){
+    #colecciones{
+        display: none;
+    }
+    
+    .textoColeccion{
+        padding: 3em 0 0 0;
+        font-size: 1.8em;
+        color: black;
+    }
+
+    #desplegable1{
+        top: -2em;
+        background-image: url(media/aire\ libre\ zapatillas.jpg);
+        width: 90%;
+        height: 15em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 1em auto;
+    }
+
+    .botonColeccion{
+        left: .1em;
+    }
+}
+
 
 @media only screen and (max-width:660px){
     .tarjeta{
@@ -617,6 +720,35 @@ span{
     .nombre {
         left: 70%;
     }
+
+    #colecciones{
+        display: none;
+    }
+    
+    .textoColeccion{
+        font-size: 1.8em;
+        color: black;
+    }
+
+    .textoColeccion{
+        padding: 3em 0 0 0;
+        font-size: 1.8em;
+        color: black;
+    }
+
+    #desplegable1{
+        top: -2em;
+        background-image: url(media/aire\ libre\ zapatillas.jpg);
+        width: 90%;
+        height: 15em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 1em auto;
+    }
+
+    .botonColeccion{
+        left: .1em;
+    }
 }
 
 @media only screen and (max-width:566px){
@@ -643,7 +775,7 @@ span{
     }
     
     .botonesPortada{
-        font-size: 1em;
+        font-size: .8em;
     }
 
     #menuHamburguesa{
@@ -657,14 +789,11 @@ span{
     .titulo{
         font-size: 2em;
         top: 2em;
-
     }
 
     .redes{
-        width: 7em;
-        
+        width: 7em;   
     }
-
 
     .tarjeta{
         width: 10em;
@@ -710,11 +839,36 @@ span{
     }
 
     .contactoHike{
-        width: 260px;
+        width: 280px;
+        right: 200px;
     }
 
     .banner{
         height: 100px;
+    }
+
+    #colecciones{
+        display: none;
+    }
+    
+    .textoColeccion{
+        font-size: 2em;
+        color: black;
+        padding: 1em 0 0 0;
+
+    }
+
+    #desplegable1{
+        top: -5em;
+        background-image: url(media/aire\ libre\ zapatillas.jpg);
+        width: 100%;
+        height: 10em;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .botonColeccion{
+        left: .1em;
     }
 }
 
